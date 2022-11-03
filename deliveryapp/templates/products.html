@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>productdetails</title>
+</head>
+<body>
+<form method="post"> {% csrf_token %}
+{%for a in buy%}
+    <h2>Product Details</h2>
+    <table border="2">
+    <tr>
+        <th>Item name</th>
+        <td>{{a.name}}</td>
+
+    </tr>
+<!--    <tr>-->
+<!--        <th>Item Price</th>-->
+<!--         <td>{{a.Price}}</td>-->
+<!--    </tr>-->
+    <tr>
+        <th>Item Quantity</th>
+         <td>{{a.quantity}}</td>
+
+
+    </tr>
+</table>
+<button type="submit">Click</button>
+</form>
+</body>
+</html>
